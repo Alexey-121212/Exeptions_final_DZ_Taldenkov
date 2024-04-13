@@ -39,13 +39,22 @@ public class HumanCard {
 
     @Override
     public String toString() {
-        return new String()
-                .format("<%s> <%s> <%s> <%s> <%d> <%s>\n",
-                        firstName,
-                        secondName,
-                        middleName,
-                        birthDate,
-                        phoneNumber,
-                        sex);
+        String str = new String();
+        String.format(str, "<%s> <%s> <%s> <%s> <%d> <%s>\n",
+                firstName,
+                secondName,
+                middleName,
+                birthDate,
+                phoneNumber,
+                sex);
+        return str;
+//        return new String()
+//                .format("<%s> <%s> <%s> <%s> <%d> <%s>\n",
+//                        firstName,
+//                        secondName,
+//                        middleName,
+//                        birthDate,
+//                        phoneNumber,
+//                        sex);
     }
 }
