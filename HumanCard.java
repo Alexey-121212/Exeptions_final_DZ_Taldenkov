@@ -60,7 +60,7 @@ public class HumanCard {
     @Override
     public String toString() {
         return new String()
-                .format("Имя %s\nОтчество %s\nФамилия %s\nДата рождения %s\nНомер телефона %d\nПол %s\n",
+                .format("<%s> <%s> <%s> <%s> <%d> <%s>\n",
                         firstName,
                         secondName,
                         middleName,
