@@ -39,7 +39,7 @@ public class HumanCard {
 
     @Override
     public String toString() {
-        String str = new String();
+        String str = "";
         String.format(str, "<%s> <%s> <%s> <%s> <%d> <%s>\n",
                 firstName,
                 secondName,
@@ -48,13 +48,5 @@ public class HumanCard {
                 phoneNumber,
                 sex);
         return str;
-//        return new String()
-//                .format("<%s> <%s> <%s> <%s> <%d> <%s>\n",
-//                        firstName,
-//                        secondName,
-//                        middleName,
-//                        birthDate,
-//                        phoneNumber,
-//                        sex);
     }
 }
