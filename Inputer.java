@@ -6,7 +6,7 @@ import MyExeptions.StringIsEmptyExeption;
 import java.util.Scanner;
 
 public class Inputer {
-    private HumanCard humanCard;
+    private final HumanCard humanCard;
 
     {
         humanCard = new HumanCard();
@@ -40,7 +40,7 @@ public class Inputer {
             }
             case correct -> {
                 try {
-                    if (checkString("Фамилия", inputedStringArray[0])) ;
+                    checkString("Фамилия", inputedStringArray[0]);
                 } catch (StringIsEmptyExeption e) {
                     System.out.println(e.getMessage());
                     isCorrect = false;
@@ -102,25 +102,22 @@ public class Inputer {
         return NumParamsErrorCodes.less;
     }
 
-    private static boolean checkString(String name, String string) throws StringIsEmptyExeption {
+    private static void checkString(String name, String string) throws StringIsEmptyExeption {
         if (string == null || string.length() < 2) {
             throw new StringIsEmptyExeption(name);
         }
-        return true;
     }
 
-    private static boolean checkDate(String string) throws DataFormatExeption {
+    private static void checkDate(String string) throws DataFormatExeption {
         if (string == null || !(string.matches("\\d{2}.\\d{2}.\\d{4}"))) {
             throw new DataFormatExeption();
         }
-        return true;
     }
 
-    private static boolean checkPhoneNum(String string) throws PhoneFormatExeption {
+    private static void checkPhoneNum(String string) throws PhoneFormatExeption {
         if (string == null || !(string.matches("\\d+"))) {
             throw new PhoneFormatExeption();
         }
-        return true;
     }
 
 
