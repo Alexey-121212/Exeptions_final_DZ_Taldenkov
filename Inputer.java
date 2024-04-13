@@ -120,12 +120,10 @@ public class Inputer {
         }
     }
 
-
-    private static boolean checkSex(String string) throws ParseSexTypeExeption {
+    private static void checkSex(String string) throws ParseSexTypeExeption {
         if (string == null || !(string.matches("[fm]"))) {
             throw new ParseSexTypeExeption();
         }
-        return true;
     }
 
     public HumanCard getHumanCard() {
