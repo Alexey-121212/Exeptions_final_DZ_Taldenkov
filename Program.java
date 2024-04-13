@@ -1,11 +1,12 @@
 public class Program {
     public static void main(String[] args) {
-        HumanCard humanCard = new HumanCard();
+        Inputer inputer = Inputer.create();
+        if (inputer != null) {
+            Outputer outputer = new Outputer();
+            outputer.addHumanCard(inputer.getHumanCard());
+            System.out.println("\n" + inputer.getHumanCard());
+        } else System.out.println("\nЗначения в файл не добавлены");
 
 
-        Inputer inp = new Inputer(humanCard);
-
-        Outputer outp = new Outputer();
-        outp.addHumanCard(humanCard);
     }
 }
