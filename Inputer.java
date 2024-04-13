@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 public class Inputer {
     private HumanCard humanCard;
+
     {
         humanCard = new HumanCard();
     }
+
     private Inputer(String firstName, String secondName, String middleName, String birthDate, int phoneNumber, Sex sex) {
         humanCard.setFirstName(firstName);
         humanCard.setSecondName(secondName);
@@ -45,35 +47,35 @@ public class Inputer {
                 }
 
                 try {
-                    if (checkString("Имя", inputedStringArray[1])) ;
+                    checkString("Имя", inputedStringArray[1]);
                 } catch (StringIsEmptyExeption e) {
                     System.out.println(e.getMessage());
                     isCorrect = false;
                 }
 
                 try {
-                    if (checkString("Отчество", inputedStringArray[2])) ;
+                    checkString("Отчество", inputedStringArray[2]);
                 } catch (StringIsEmptyExeption e) {
                     System.out.println(e.getMessage());
                     isCorrect = false;
                 }
 
                 try {
-                    if (checkDate(inputedStringArray[3])) ;
+                    checkDate(inputedStringArray[3]);
                 } catch (DataFormatExeption e) {
                     System.out.println(e.getMessage());
                     isCorrect = false;
                 }
 
                 try {
-                    if (checkPhoneNum(inputedStringArray[4])) ;
+                    checkPhoneNum(inputedStringArray[4]);
                 } catch (PhoneFormatExeption e) {
                     System.out.println(e.getMessage());
                     isCorrect = false;
                 }
 
                 try {
-                    if (checkSex(inputedStringArray[5])) ;
+                    checkSex(inputedStringArray[5]);
                 } catch (ParseSexTypeExeption e) {
                     System.out.println(e.getMessage());
                     isCorrect = false;
